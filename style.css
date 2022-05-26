@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.cards {
+  max-width: 900px;
+  margin: 100px auto;
+  display: flex;
+  padding: 15px;
+}
+
+.container {
+  padding: 45px;
+}
+
+.card-1,
+.btn--1:link,
+.btn--1:visited {
+  background-color: var(--bright-orange);
+  color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-2,
+.btn--2:link,
+.btn--2:visited {
+  color: var(--dark-cyan);
+  background-color: var(--dark-cyan);
+}
+
+.card-3,
+.btn--3:link,
+.btn--3:visited {
+  color: var(--very-dark-cyan);
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-header {
+  margin: 25px 0;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  color: var(--very-light-gray);
+  letter-spacing: 1px;
+}
+
+.card-description {
+  margin-bottom: 70px;
+  line-height: 1.5;
+  color: var(--transparent-white);
+  font-size: 15px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: var(--very-light-gray);
+
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid var(--very-light-gray);
+  transition: all 0.3s;
+}
+
+.btn:active,
+.btn:hover {
+  border: 2px solid var(--very-light-gray);
+  color: var(--very-light-gray);
+  background-color: inherit;
+}
+
+@media (max-width: 750px) {
+  .cards {
+    max-width: 375px;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .card-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .card-3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .card-description {
+    margin-bottom: 30px;
+  }
+}
